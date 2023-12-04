@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-frontend
+  labels:
+    app: ubuntu-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ubuntu
+  template:
+    metadata:
+      name: ubuntu-pod
+      labels:
+        app: ubuntu
+    spec:
+      containers:
+        - name: ubuntu-alpine
+          image: httpd:2.4-alpine
