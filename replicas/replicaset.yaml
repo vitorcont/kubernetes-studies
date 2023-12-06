@@ -12,6 +12,7 @@ spec:
       labels:
         app: nginx
         env: prod
+        atatatat: asgdfsadj
     spec:
       containers:
         - name: nginx
